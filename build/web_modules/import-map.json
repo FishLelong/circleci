@@ -1,0 +1,26 @@
+{
+  "imports": {
+    "@pie-dao/abis": "./@pie-dao/abis.js",
+    "@pie-dao/utils": "./@pie-dao/utils.js",
+    "@pie-dao/utils/src/utils/typeChecks": "./@pie-dao/utils/src/utils/typeChecks.js",
+    "@walletconnect/web3-provider": "./@walletconnect/web3-provider.js",
+    "bignumber.js": "./bignumberjs.js",
+    "bnc-notify": "./bnc-notify.js",
+    "d3": "./d3.js",
+    "ethers": "./ethers.js",
+    "jazzicon": "./jazzicon.js",
+    "lodash/debounce": "./lodash/debounce.js",
+    "lodash/filter": "./lodash/filter.js",
+    "lodash/find": "./lodash/find.js",
+    "lodash/first": "./lodash/first.js",
+    "lodash/flattenDeep": "./lodash/flattenDeep.js",
+    "lodash/get": "./lodash/get.js",
+    "lodash/isNaN": "./lodash/isNaN.js",
+    "lodash/orderBy": "./lodash/orderBy.js",
+    "rxjs": "./rxjs.js",
+    "svelte": "./svelte.js",
+    "svelte-i18n": "./svelte-i18n.js",
+    "svelte/internal": "./svelte/internal.js",
+    "svelte/store": "./svelte/store.js"
+  }
+}
