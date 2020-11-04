@@ -19,7 +19,7 @@ jobs:
             - v1-dependencies
       - add_ssh_keys:
           fingerprints:
-            - "39:5b:76:df:22:49:d7:1c:07:7c:a7:95:ea:d9:75:60"
+            - "62:5c:01:f1:d3:5b:15:a4:fe:0c:38:a9:70:c6:4e:0a"
       - run: echo $REMOTE_HOSTKEY >> ~/.ssh/known_hosts
       - deploy:
           name: deploy
