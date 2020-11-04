@@ -23,7 +23,7 @@ jobs:
       - run: echo $REMOTE_HOSTKEY >> ~/.ssh/known_hosts
       - deploy:
           name: deploy
-          command: rsync -av ssh build $SSH_USER@$SSH_IP:/root/cep
+          command: rsync -av build $SSH_USER@$SSH_IP:/root/cep
       - run: echo '部署完'
 workflows:
   version: 2
