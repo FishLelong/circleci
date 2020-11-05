@@ -1,32 +1,94 @@
-version: 2.0
+# version: 2.0
+# jobs:
+#   build:
+#     docker:
+#       - image: circleci/node:latest
+#     steps:
+#       - checkout
+#       - run: npm install
+#       - save_cache:
+#           key: v1-dependencies-{{ checksum "package.json" }}
+#           paths:
+#             - node_modules
+#       - run: npm run build
+#       - run: echo '部署开始'
+#       - run: sudo apt-get update && sudo apt-get install rsync
+#       - restore_cache:
+#           keys: 
+#             - v1-dependencies-{{ checksum "package.json" }}
+#             - v1-dependencies
+#       - add_ssh_keys:
+#           fingerprints:
+#             - "62:5c:01:f1:d3:5b:15:a4:fe:0c:38:a9:70:c6:4e:0a"
+#       - run: echo $REMOTE_HOSTKEY >> ~/.ssh/known_hosts
+#       - deploy:
+#           name: deploy
+#           command: rsync -av build $SSH_USER@$SSH_IP:/root/cep
+#       - run: echo '部署完'
+# workflows:
+#   version: 2
+#   build-deploy:
+#     jobs:
+#     - build
+version: 2
 jobs:
   build:
     docker:
       - image: circleci/node:latest
+      - image: bash:4.4.19
     steps:
+      - run: echo "==============构建开始=================="
       - checkout
-      - run: npm install
+      - run: sudo apt-get update
+      - run: sudo apt-get install git
+      - run:
+          name: Update npm
+          command: 'sudo npm install -g npm@latest'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Install npm dep
+          command: npm install
       - save_cache:
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - node_modules
-      - run: npm run build
-      - run: echo '部署开始'
-      - run: sudo apt-get update && sudo apt-get install rsync
-      - restore_cache:
-          keys: 
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ./*
+      - run: echo "==============构建完成=================="
+  deploy:
+    docker:
+      - image: circleci/node:latest
+      - image: bash:4.4.19
+    steps:
       - add_ssh_keys:
           fingerprints:
-            - "62:5c:01:f1:d3:5b:15:a4:fe:0c:38:a9:70:c6:4e:0a"
-      - run: echo $REMOTE_HOSTKEY >> ~/.ssh/known_hosts
-      - deploy:
-          name: deploy
-          command: rsync -av build $SSH_USER@$SSH_IP:/root/cep
-      - run: echo '部署完'
+            - "87:4b:86:a9:12:8b:17:ff:e2:11:e4:31:1c:79:ef:2d"
+      - run: echo "==============部署开始=================="
+      - run: ssh-keyscan github.com >> ~/.ssh/known_hosts
+      - attach_workspace:
+          at: /tmp/workspace
+      - run: pwd && ls -al
+      - run:
+          name: get bash permission
+          command: chmod 755 ./.circleci/deploy.sh
+      - run:
+          name: Deploy Over SSH
+          command: ./.circleci/deploy.sh
+      - run: echo "==============部署完成=================="
+
 workflows:
   version: 2
-  build-deploy:
+  build_and_deploy:
     jobs:
-    - build
+      - build
+      - deploy:
+          requires:
+            - build
+          # filters:
+          #   branches:
+          #     only: release
+
+
