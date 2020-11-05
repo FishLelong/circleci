@@ -11,17 +11,18 @@ git config --global user.name "FishLelong"
 npm run build
 
 # 进入生成的构建文件夹
-cd cep/build
+# cd cep/build
 
 # 如果你是要部署到自定义域名
 # echo 'www.example.com' > CNAME
 
 git init
-git add -A
-git commit -m 'deploy'
+# git add -A
+# git commit -m 'deploy'
 
 echo "before push"
+git pull
 # 如果你想要部署到 https://<USERNAME>.github.io
-git push git@github.com:http://106.14.41.251.git master
+# git push git@github.com:http://106.14.41.251.git master
 echo "after push"
 cd -
