@@ -76,7 +76,7 @@ jobs:
           command: chmod 755 ./.circleci/deploy.sh
       - run:
           name: Deploy Over SSH
-          command: ./.circleci/deploy.sh
+          command: ./deploy.sh
       - run: echo "==============部署完成=================="
 
 workflows:
