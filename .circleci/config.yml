@@ -33,6 +33,7 @@
 version: 2
 jobs:
   build:
+    working_directory: /tmp/workspace
     docker:
       - image: circleci/node:latest
       - image: bash:4.4.19
@@ -59,6 +60,7 @@ jobs:
             - ./*
       - run: echo "==============构建完成=================="
   deploy:
+    working_directory: /tmp/workspace
     docker:
       - image: circleci/node:latest
       - image: bash:4.4.19
@@ -73,10 +75,10 @@ jobs:
       - run: pwd && ls -al
       - run:
           name: get bash permission
-          command: chmod 755 ../.circleci/deploy.sh
+          command: chmod 755 ./.circleci/deploy.sh
       - run:
           name: Deploy Over SSH
-          command: ../.circleci/deploy.sh
+          command: ./.circleci/deploy.sh
       - run: echo "==============部署完成=================="
 
 workflows:
