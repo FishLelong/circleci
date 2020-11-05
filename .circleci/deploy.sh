@@ -34,7 +34,7 @@ server_paths=(
 )
 #要部署的服务器地址
 servers=(
-ssh://root@106.14.41.251
+ssh://root@106.14.41.251:22
 )
 remotes=$(/usr/bin/git remote)
 echo $remotes
