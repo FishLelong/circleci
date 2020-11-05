@@ -25,4 +25,4 @@ git pull
 # 如果你想要部署到 https://<USERNAME>.github.io
 # git push git@github.com:http://106.14.41.251.git master
 echo "after push"
-cd -
+# cd -
