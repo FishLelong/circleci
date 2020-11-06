@@ -16,13 +16,15 @@ npm run build
 # 如果你是要部署到自定义域名
 # echo 'www.example.com' > CNAME
 
-# git init
-# git add -A
-# git commit -m 'deploy'
+git init
+git add -A
+git commit -m 'deploy'
 
 echo "before push"
 git pull
 # 如果你想要部署到 https://<USERNAME>.github.io
+git remote add prod ssh://root@106.14.41.251/root/cep/circle.git
+git push prod master
 # git push ssh://root@106.14.41.251/root/cep/circle.git
 echo "after push"
 # cd -
