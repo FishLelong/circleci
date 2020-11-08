@@ -24,7 +24,7 @@ jobs:
       - deploy:
           name: deploy
           # command: rsync -av build $SSH_USER@$SSH_IP:/root/cep
-          command: git pull
+          command: ssh root@106.14.41.251
       - run: echo '部署完'
 workflows:
   version: 2
