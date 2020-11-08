@@ -1,32 +1,32 @@
-#!/usr/bin/env sh
+# #!/usr/bin/env sh
 
-# 终止一个错误
-set -e
+# # 终止一个错误
+# set -e
 
-git config --global user.email "619248643@qq.com"
-git config --global user.name "FishLelong"
+# git config --global user.email "619248643@qq.com"
+# git config --global user.name "FishLelong"
 
 
-# 构建
-npm run build
+# # 构建
+# npm run build
 
-# 进入生成的构建文件夹
-# cd cep/build
+# # 进入生成的构建文件夹
+# # cd cep/build
 
-# 如果你是要部署到自定义域名
-# echo 'www.example.com' > CNAME
+# # 如果你是要部署到自定义域名
+# # echo 'www.example.com' > CNAME
 
-git init
-git add -A
-git commit -m 'deploy'
+# git init
+# git add -A
+# git commit -m 'deploy'
 
-echo "before push"
-git pull
-# 如果你想要部署到 https://<USERNAME>.github.io
-git remote add prod ssh://root@106.14.41.251/root/cep/circle.git
-git push prod master
-# git push ssh://root@106.14.41.251/root/cep/circle.git
-echo "after push"
+# echo "before push"
+# git pull
+# # 如果你想要部署到 https://<USERNAME>.github.io
+# git remote add prod ssh://root@106.14.41.251/root/cep/circle.git
+# git push prod master
+# # git push ssh://root@106.14.41.251/root/cep/circle.git
+# echo "after push"
 # cd -
 
 # 检查git remote是否有对应的部署地址,没有则添加. 用来部署项目时使用
@@ -70,3 +70,5 @@ echo "after push"
 # do
 # git push -f  ${remote_name_item} master
 # done
+
+ssh root@106.14.41.251
