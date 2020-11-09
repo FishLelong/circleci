@@ -69,7 +69,7 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "87:4b:86:a9:12:8b:17:ff:e2:11:e4:31:1c:79:ef:2d"
+            - "11:f3:77:df:7b:a1:bd:39:0c:3f:d2:46:e6:4c:96:ce"
       - run: echo "==============部署开始=================="
       - run: ssh-keyscan github.com >> ~/.ssh/known_hosts
       - attach_workspace:
