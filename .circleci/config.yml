@@ -69,9 +69,9 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "24:04:41:da:7d:48:58:c5:73:08:18:46:05:28:d6:bf"
-      - run: echo "==============部署开始=================="
+            - "87:4b:86:a9:12:8b:17:ff:e2:11:e4:31:1c:79:ef:2d"
       - run: ssh-keyscan $REMOTE_HOSTKEY >> ~/.ssh/known_hosts
+      - run: echo "==============部署开始=================="
       - attach_workspace:
           at: /tmp/workspace
       - run: pwd && ls -al
