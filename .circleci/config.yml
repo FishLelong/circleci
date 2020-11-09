@@ -78,8 +78,7 @@ jobs:
       - run: pwd && ls -al
       - run:
         name: Deploy Over SSH
-        command: |
-          ssh $SSH_USER@$SSH_IP " cd ~/cep/circleci; git pull; "
+        command: ssh $SSH_USER@$SSH_IP "cd ~/cep/circleci; git pull;"
       # - run:
       #     name: get bash permission
       #     command: chmod 755 ./.circleci/deploy.sh
