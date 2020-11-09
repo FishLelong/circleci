@@ -75,10 +75,7 @@ jobs:
       - attach_workspace:
           at: /tmp/workspace
       - run: pwd && ls -al
-      - run: |
-            ssh $SSH_USER@$SSH_HOST 
-            cd /root/cep/circleci
-            git pull
+      - run: ssh $SSH_USER@$SSH_IP "./.circleci/deploy.sh"
       # - run:
       #     name: get bash permission
       #     command: chmod 755 ./.circleci/deploy.sh
