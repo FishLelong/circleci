@@ -75,13 +75,12 @@ jobs:
       - attach_workspace:
           at: /tmp/workspace
       - run: pwd && ls -al
-      - run: ssh $SSH_USER@$SSH_IP "./.circleci/deploy.sh"
-      # - run:
-      #     name: get bash permission
-      #     command: chmod 755 ./.circleci/deploy.sh
-      # - run:
-      #     name: Deploy Over SSH
-      #     command: ./.circleci/deploy.sh
+      - run:
+          name: get bash permission
+          command: chmod 755 ./.circleci/deploy.sh
+      - run:
+          name: Deploy Over SSH
+          command: ./.circleci/deploy.sh
       - run: echo "==============部署完成=================="
 
 workflows:
