@@ -80,7 +80,7 @@ jobs:
           command: chmod 755 ./.circleci/deploy.sh
       - run:
           name: Deploy Over SSH
-          command: ssh -i /root/.ssh/id_rsa $SSH_USER@$SSH_IP  "./.circleci/deploy.sh"
+          command: ./.circleci/deploy.sh
       - run: echo "==============部署完成=================="
 
 workflows:
