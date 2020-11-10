@@ -191,64 +191,61 @@ function create_fragment(ctx) {
 	let div3;
 	let div0;
 	let a0;
-	let img0;
-	let img0_src_value;
-	let img0_alt_value;
-	let t0;
+	let t1;
 	let div2;
 	let a1;
 	let button0;
-	let t1_value = /*$_*/ ctx[2]("header.buyceptoken") + "";
-	let t1;
-	let button0_class_value;
+	let t2_value = /*$_*/ ctx[2]("header.buyceptoken") + "";
 	let t2;
+	let button0_class_value;
+	let t3;
 	let span0;
-	let t4;
+	let t5;
 	let a2;
 	let button1;
-	let t5_value = /*$_*/ ctx[2]("general.stake") + "";
-	let t5;
-	let button1_class_value;
+	let t6_value = /*$_*/ ctx[2]("general.stake") + "";
 	let t6;
+	let button1_class_value;
+	let t7;
 	let span1;
-	let t8;
+	let t9;
 	let a3;
 	let button2;
-	let t9_value = /*$_*/ ctx[2]("header.ceptoken") + "";
-	let t9;
-	let button2_class_value;
+	let t10_value = /*$_*/ ctx[2]("header.ceptoken") + "";
 	let t10;
+	let button2_class_value;
+	let t11;
 	let a4;
 	let button3;
-	let t11_value = /*$_*/ ctx[2]("header.earlybird") + "";
-	let t11;
-	let button3_class_value;
+	let t12_value = /*$_*/ ctx[2]("header.earlybird") + "";
 	let t12;
-	let a5;
-	let t13_value = /*$_*/ ctx[2]("general.vision") + "";
+	let button3_class_value;
 	let t13;
-	let a5_href_value;
+	let a5;
+	let t14_value = /*$_*/ ctx[2]("general.vision") + "";
 	let t14;
-	let a6;
-	let t15_value = /*$_*/ ctx[2]("piedao.aragonLink") + "";
+	let a5_href_value;
 	let t15;
-	let a6_href_value;
+	let a6;
+	let t16_value = /*$_*/ ctx[2]("piedao.aragonLink") + "";
 	let t16;
-	let a7;
-	let t17_value = /*$_*/ ctx[2]("general.docs") + "";
+	let a6_href_value;
 	let t17;
-	let a7_href_value;
+	let a7;
+	let t18_value = /*$_*/ ctx[2]("general.docs") + "";
 	let t18;
-	let web3button;
+	let a7_href_value;
 	let t19;
-	let language;
+	let web3button;
 	let t20;
-	let div1;
+	let language;
 	let t21;
-	let button4;
-	let img1;
-	let img1_src_value;
+	let div1;
 	let t22;
+	let button4;
+	let img;
+	let img_src_value;
+	let t23;
 	let current;
 	let mounted;
 	let dispose;
@@ -261,53 +258,50 @@ function create_fragment(ctx) {
 			div3 = element("div");
 			div0 = element("div");
 			a0 = element("a");
-			img0 = element("img");
-			t0 = space();
+			a0.textContent = "hhhhhhh";
+			t1 = space();
 			div2 = element("div");
 			a1 = element("a");
 			button0 = element("button");
-			t1 = text(t1_value);
-			t2 = space();
+			t2 = text(t2_value);
+			t3 = space();
 			span0 = element("span");
 			span0.textContent = "🥧";
-			t4 = space();
+			t5 = space();
 			a2 = element("a");
 			button1 = element("button");
-			t5 = text(t5_value);
-			t6 = space();
+			t6 = text(t6_value);
+			t7 = space();
 			span1 = element("span");
 			span1.textContent = "🥧";
-			t8 = space();
+			t9 = space();
 			a3 = element("a");
 			button2 = element("button");
-			t9 = text(t9_value);
-			t10 = space();
+			t10 = text(t10_value);
+			t11 = space();
 			a4 = element("a");
 			button3 = element("button");
-			t11 = text(t11_value);
-			t12 = space();
+			t12 = text(t12_value);
+			t13 = space();
 			a5 = element("a");
-			t13 = text(t13_value);
-			t14 = space();
+			t14 = text(t14_value);
+			t15 = space();
 			a6 = element("a");
-			t15 = text(t15_value);
-			t16 = space();
+			t16 = text(t16_value);
+			t17 = space();
 			a7 = element("a");
-			t17 = text(t17_value);
-			t18 = space();
-			create_component(web3button.$$.fragment);
+			t18 = text(t18_value);
 			t19 = space();
-			create_component(language.$$.fragment);
+			create_component(web3button.$$.fragment);
 			t20 = space();
-			div1 = element("div");
+			create_component(language.$$.fragment);
 			t21 = space();
-			button4 = element("button");
-			img1 = element("img");
+			div1 = element("div");
 			t22 = space();
+			button4 = element("button");
+			img = element("img");
+			t23 = space();
 			if (if_block) if_block.c();
-			if (img0.src !== (img0_src_value = logo)) attr(img0, "src", img0_src_value);
-			attr(img0, "alt", img0_alt_value = /*$_*/ ctx[2]("general.logo"));
-			attr(img0, "class", "svelte-9w0bg2");
 			attr(a0, "href", "#/");
 			attr(div0, "class", "left");
 
@@ -355,9 +349,9 @@ function create_fragment(ctx) {
 			attr(a7, "target", "_blank");
 			attr(a7, "rel", "noopener noreferrer");
 			attr(div1, "class", "mobile-placeholder");
-			if (img1.src !== (img1_src_value = images.icons.hamburger)) attr(img1, "src", img1_src_value);
-			attr(img1, "alt", "hamburger icon");
-			attr(img1, "class", "w-min-20px svelte-9w0bg2");
+			if (img.src !== (img_src_value = images.icons.hamburger)) attr(img, "src", img_src_value);
+			attr(img, "alt", "hamburger icon");
+			attr(img, "class", "w-min-20px svelte-9w0bg2");
 			attr(button4, "class", "hamburger svelte-9w0bg2");
 			attr(button4, "type", "button");
 			attr(div2, "class", "right");
@@ -367,47 +361,46 @@ function create_fragment(ctx) {
 			insert(target, div3, anchor);
 			append(div3, div0);
 			append(div0, a0);
-			append(a0, img0);
-			append(div3, t0);
+			append(div3, t1);
 			append(div3, div2);
 			append(div2, a1);
 			append(a1, button0);
-			append(button0, t1);
-			append(div2, t2);
+			append(button0, t2);
+			append(div2, t3);
 			append(div2, span0);
-			append(div2, t4);
+			append(div2, t5);
 			append(div2, a2);
 			append(a2, button1);
-			append(button1, t5);
-			append(div2, t6);
+			append(button1, t6);
+			append(div2, t7);
 			append(div2, span1);
-			append(div2, t8);
+			append(div2, t9);
 			append(div2, a3);
 			append(a3, button2);
-			append(button2, t9);
-			append(div2, t10);
+			append(button2, t10);
+			append(div2, t11);
 			append(div2, a4);
 			append(a4, button3);
-			append(button3, t11);
-			append(div2, t12);
+			append(button3, t12);
+			append(div2, t13);
 			append(div2, a5);
-			append(a5, t13);
-			append(div2, t14);
+			append(a5, t14);
+			append(div2, t15);
 			append(div2, a6);
-			append(a6, t15);
-			append(div2, t16);
+			append(a6, t16);
+			append(div2, t17);
 			append(div2, a7);
-			append(a7, t17);
-			append(div2, t18);
-			mount_component(web3button, div2, null);
+			append(a7, t18);
 			append(div2, t19);
-			mount_component(language, div2, null);
+			mount_component(web3button, div2, null);
 			append(div2, t20);
-			append(div2, div1);
+			mount_component(language, div2, null);
 			append(div2, t21);
-			append(div2, button4);
-			append(button4, img1);
+			append(div2, div1);
 			append(div2, t22);
+			append(div2, button4);
+			append(button4, img);
+			append(div2, t23);
 			if (if_block) if_block.m(div2, null);
 			current = true;
 
@@ -421,11 +414,7 @@ function create_fragment(ctx) {
 			}
 		},
 		p(ctx, [dirty]) {
-			if (!current || dirty & /*$_*/ 4 && img0_alt_value !== (img0_alt_value = /*$_*/ ctx[2]("general.logo"))) {
-				attr(img0, "alt", img0_alt_value);
-			}
-
-			if ((!current || dirty & /*$_*/ 4) && t1_value !== (t1_value = /*$_*/ ctx[2]("header.buyceptoken") + "")) set_data(t1, t1_value);
+			if ((!current || dirty & /*$_*/ 4) && t2_value !== (t2_value = /*$_*/ ctx[2]("header.buyceptoken") + "")) set_data(t2, t2_value);
 
 			if (!current || dirty & /*currentRoute*/ 2 && button0_class_value !== (button0_class_value = "" + (null_to_empty(/*currentRoute*/ ctx[1] != "stake" && /*currentRoute*/ ctx[1] != "ceptoken" && /*currentRoute*/ ctx[1] != "earlybird"
 			? "table-btn highlight-box"
@@ -433,7 +422,7 @@ function create_fragment(ctx) {
 				attr(button0, "class", button0_class_value);
 			}
 
-			if ((!current || dirty & /*$_*/ 4) && t5_value !== (t5_value = /*$_*/ ctx[2]("general.stake") + "")) set_data(t5, t5_value);
+			if ((!current || dirty & /*$_*/ 4) && t6_value !== (t6_value = /*$_*/ ctx[2]("general.stake") + "")) set_data(t6, t6_value);
 
 			if (!current || dirty & /*currentRoute*/ 2 && button1_class_value !== (button1_class_value = "" + (null_to_empty(/*currentRoute*/ ctx[1] == "stake"
 			? "table-btn highlight-box"
@@ -441,7 +430,7 @@ function create_fragment(ctx) {
 				attr(button1, "class", button1_class_value);
 			}
 
-			if ((!current || dirty & /*$_*/ 4) && t9_value !== (t9_value = /*$_*/ ctx[2]("header.ceptoken") + "")) set_data(t9, t9_value);
+			if ((!current || dirty & /*$_*/ 4) && t10_value !== (t10_value = /*$_*/ ctx[2]("header.ceptoken") + "")) set_data(t10, t10_value);
 
 			if (!current || dirty & /*currentRoute*/ 2 && button2_class_value !== (button2_class_value = "" + (null_to_empty(/*currentRoute*/ ctx[1] == "ceptoken"
 			? "table-btn highlight-box"
@@ -449,7 +438,7 @@ function create_fragment(ctx) {
 				attr(button2, "class", button2_class_value);
 			}
 
-			if ((!current || dirty & /*$_*/ 4) && t11_value !== (t11_value = /*$_*/ ctx[2]("header.earlybird") + "")) set_data(t11, t11_value);
+			if ((!current || dirty & /*$_*/ 4) && t12_value !== (t12_value = /*$_*/ ctx[2]("header.earlybird") + "")) set_data(t12, t12_value);
 
 			if (!current || dirty & /*currentRoute*/ 2 && button3_class_value !== (button3_class_value = "" + (null_to_empty(/*currentRoute*/ ctx[1] == "earlybird"
 			? "table-btn highlight-box"
@@ -457,9 +446,9 @@ function create_fragment(ctx) {
 				attr(button3, "class", button3_class_value);
 			}
 
-			if ((!current || dirty & /*$_*/ 4) && t13_value !== (t13_value = /*$_*/ ctx[2]("general.vision") + "")) set_data(t13, t13_value);
-			if ((!current || dirty & /*$_*/ 4) && t15_value !== (t15_value = /*$_*/ ctx[2]("piedao.aragonLink") + "")) set_data(t15, t15_value);
-			if ((!current || dirty & /*$_*/ 4) && t17_value !== (t17_value = /*$_*/ ctx[2]("general.docs") + "")) set_data(t17, t17_value);
+			if ((!current || dirty & /*$_*/ 4) && t14_value !== (t14_value = /*$_*/ ctx[2]("general.vision") + "")) set_data(t14, t14_value);
+			if ((!current || dirty & /*$_*/ 4) && t16_value !== (t16_value = /*$_*/ ctx[2]("piedao.aragonLink") + "")) set_data(t16, t16_value);
+			if ((!current || dirty & /*$_*/ 4) && t18_value !== (t18_value = /*$_*/ ctx[2]("general.docs") + "")) set_data(t18, t18_value);
 
 			if (/*mobileMenuVisible*/ ctx[0]) {
 				if (if_block) {
