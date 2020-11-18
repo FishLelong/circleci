@@ -49,7 +49,6 @@ window.addEventListener('hashchange', () => {
 <div class="header-container">
   <div class="left">
     <a href="#/" on:click={deriveRoute}>
-      test
       <img src={logo} alt={$_('general.logo')} />
     </a>
   </div>
