@@ -6,6 +6,7 @@
     "start": "snowpack dev",
     "test": "jest"
   },
+  "homepage": ".",
   "dependencies": {
     "@pie-dao/abis": "^1.0.0",
     "@pie-dao/eth-tailwind": "^1.0.0",
