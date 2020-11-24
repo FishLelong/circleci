@@ -23,8 +23,8 @@ git commit -m 'deploy'
 echo "before push"
 # git pull
 # 如果你想要部署到 https://<USERNAME>.github.io
-git remote add origin ssh://root@47.254.195.149/root/test/.git/
-git push -u origin master
+git remote add test ssh://root@47.254.195.149/root/test/.git/
+git push -u test master
 # git push ssh://root@106.14.41.251/root/cep/circle.git
 echo "after push"
 cd -
