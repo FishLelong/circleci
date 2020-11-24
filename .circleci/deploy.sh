@@ -8,7 +8,7 @@ git config --global user.name "FishLelong"
 
 
 # 构建
-npm run build
+# npm run build
 
 # 进入生成的构建文件夹
 # cd cep/build
@@ -17,11 +17,13 @@ npm run build
 # echo 'www.example.com' > CNAME
 
 # git init
-git add -A
+git add .
 git commit -m 'deploy'
 
 echo "before push"
-# git pull
+git pull
+echo "git pull"
+
 # 如果你想要部署到 https://<USERNAME>.github.io
 git remote rm origin
 git remote add origin ssh://root@47.254.195.149/root/test1/.git/
