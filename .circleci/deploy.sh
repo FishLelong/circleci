@@ -16,13 +16,14 @@ git config --global user.name "FishLelong"
 # 如果你是要部署到自定义域名
 # echo 'www.example.com' > CNAME
 
+git clone https://github.com/FishLelong/circleci.git
 # git init
 git add .
 git commit -m 'deploy'
 
 echo "before push"
-git pull
-echo "git pull"
+# git pull
+# echo "git pull"
 
 # 如果你想要部署到 https://<USERNAME>.github.io
 git remote rm origin
